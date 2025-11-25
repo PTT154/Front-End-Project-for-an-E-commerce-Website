@@ -8,7 +8,7 @@ class Product {
         this.rating = rating;
         this.desc = desc;
         this.img = img;
-        this.productType = type;
+        this.type = type;
     };
 }
 

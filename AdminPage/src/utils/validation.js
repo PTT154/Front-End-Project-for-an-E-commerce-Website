@@ -14,6 +14,18 @@ class Validation {
         return true;
     }
 
+    checkFloat(value, errorId, mess) {
+        // Chấp nhận cả số nguyên và số thực
+        if (!isNaN(value) && value.toString().trim() !== "") {
+            getEle(errorId).style.display = 'none';
+            getEle(errorId).innerHTML = '';
+            return true;
+        }
+        getEle(errorId).style.display = 'block';
+        getEle(errorId).innerHTML = mess;
+        return false;
+    }
+
     checkLength(value, errorId, mess, min, max) {
         if (value && min <= value.trim().length && value.trim().length <= max) {
             // success

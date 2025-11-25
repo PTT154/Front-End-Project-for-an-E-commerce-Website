@@ -50,12 +50,6 @@
   justify-content: center;
 }
 
-/* chừa khoảng bên phải trong input để không che nội dung */
-.input-with-right-icon .form-control {
-  padding-right: 48px;
-  /* điều chỉnh bằng chiều rộng icon + khoảng cách */
-}
-
 /* nếu muốn icon nhỏ hơn */
 .input-with-right-icon .inside-right-icon i {
   font-size: 1.2rem;

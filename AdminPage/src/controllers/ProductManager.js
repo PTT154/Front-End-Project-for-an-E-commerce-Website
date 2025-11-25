@@ -47,7 +47,7 @@ class ProductManager {
         }
         let result = [];
         for (let i = 0; i < this.arr.length; i++) {
-            if (this.arr[i].productType === productType) {
+            if (this.arr[i].type === productType) {
                 result.push(this.arr[i]);
             }
         }
@@ -68,6 +68,6 @@ class ProductManager {
         }
         return result;
     }
-} 
+}
 
 export default ProductManager;
