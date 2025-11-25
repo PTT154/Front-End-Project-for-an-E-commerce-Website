@@ -1,0 +1,33 @@
+.list__tv {
+  margin-top: 3rem;
+  width: 100%;
+
+  .list__tv_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    align-items: center;
+
+    h2 {
+      color: black;
+      font-weight: 500;
+      @include text-8();
+      line-height: 1.2;
+    }
+
+    button {
+      @include small-btn(transparent, var(--primary-color), var(--primary-color), white);
+      padding: 0.5rem 1rem;
+      border: 0.3px solid var(--primary-color);
+      background: transparent;
+      @include text-2();
+    }
+  }
+
+  .listProductTV {
+    // display: flex;
+    // justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+}

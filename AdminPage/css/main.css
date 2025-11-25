@@ -1,0 +1,69 @@
+.sp-thongbao {
+  color: red;
+  margin-left: 2px;
+  display: none;
+}
+
+#SapXepGiam {
+  display: none;
+}
+
+#content {
+  width: 100%;
+  background: #74ebd5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ACB6E5, #74ebd5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.myCardHeader,
+.myCardFooter {
+  background-color: transparent;
+}
+
+.form-group-custom {
+  margin-bottom: 0 !important;
+}
+
+/* Icon nằm bên trong input, phía bên phải */
+.input-with-right-icon {
+  position: relative;
+}
+
+.input-with-right-icon .inside-right-icon {
+  position: absolute;
+  right: 12px;
+  /* khoảng cách từ phải, điều chỉnh nếu cần */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: auto;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* chừa khoảng bên phải trong input để không che nội dung */
+.input-with-right-icon .form-control {
+  padding-right: 48px;
+  /* điều chỉnh bằng chiều rộng icon + khoảng cách */
+}
+
+/* nếu muốn icon nhỏ hơn */
+.input-with-right-icon .inside-right-icon i {
+  font-size: 1.2rem;
+}
+
+#tableDanhSach td {
+  height: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  vertical-align: middle;
+}

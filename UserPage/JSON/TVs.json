@@ -1,0 +1,46 @@
+[
+    {
+        "name": "LED TV",
+        "oldPrice": 1200,
+        "newPrice": 990,
+        "discount": 17.5,
+        "rating": 4.5,
+        "img": "product-09.jpg",
+        "desc": "High-definition LED TV with vibrant colors and sleek design.",
+        "type": "Television",
+        "id": "T1"
+    },
+    {
+        "name": "OLED TV",
+        "oldPrice": 1400,
+        "newPrice": 1299,
+        "discount": 7.2,
+        "rating": 4.8,
+        "img": "product-10.jpg",
+        "desc": "Premium OLED display for deep blacks and vivid contrast.",
+        "type": "Television",
+        "id": "T2"
+    },
+    {
+        "name": "QLED TV",
+        "oldPrice": 1700,
+        "newPrice": 1599,
+        "discount": 5.9,
+        "rating": 4.7,
+        "img": "product-11.jpg",
+        "desc": "Quantum dot QLED TV with lifelike picture quality and smart features.",
+        "type": "Television",
+        "id": "T3"
+    },
+    {
+        "name": "LED TV",
+        "oldPrice": 1150,
+        "newPrice": 849,
+        "discount": 26.2,
+        "rating": 4.3,
+        "img": "product-12.jpg",
+        "desc": "Energy-efficient LED TV with crisp visuals and modern look.",
+        "type": "Television",
+        "id": "T4"
+    }
+]

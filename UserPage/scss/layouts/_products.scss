@@ -1,0 +1,100 @@
+.products-section {
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+
+    .products-list {
+        margin: 1rem 0;
+        // display: flex;
+        // flex-wrap: wrap;
+        // margin-right: 25px; (dùng owl carousel nên ko cần, có hỗ trợ margin)
+    }
+
+    .products-list__item {
+        // width: calc(25% - 18.75px); (dùng owl carousel nên ko cần)
+        border: 1px solid $border-color;
+        padding: 1rem;
+        transition: all 0.3s;
+        position: relative;
+
+        &:hover {
+            border: 1px solid var(--primary-color);
+        }
+
+        .discount {
+            position: absolute;
+            padding: 0.25rem 1rem;
+            background-color: #e53935;
+            color: white;
+            right: 0;
+            top: 0;
+        }
+
+        a.products-list__thumb {
+            display: block;
+            height: auto;
+
+            img {
+                width: 100%;
+                display: block;
+                object-fit: cover;
+            }
+        }
+
+        .products-list__info {
+            text-align: center;
+
+            h4 a {
+                text-decoration: none;
+                color: $products-name-text-color;
+                @include text-4();
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+
+            .products-list__price {
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+
+                span.price--old {
+                    @include text-2();
+                    color: $old-price-text-color;
+                    text-decoration: line-through;
+                    margin-right: 0.25rem;
+                }
+
+                span.price--new {
+                    color: var(--primary-color);
+                }
+            }
+
+            .rating {
+                span {
+                    font-weight: 500;
+                }
+
+                i {
+                    color: #ffc400;
+                }
+            }
+        }
+
+        .products-list__btn {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+
+            button:first-of-type {
+                width: 50%;
+                @include small-btn(var(--primary-color), white, var(--primary-color-dark));
+            }
+
+            button:last-of-type {
+                width: 50%;
+                @include small-btn(transparent, black, black, white);
+                border: 1px solid black;
+            }
+        }
+    }
+}

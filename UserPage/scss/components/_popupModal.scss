@@ -1,0 +1,412 @@
+.modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+
+    .modal-inner {
+        background-color: white;
+        transform: translateY(-40px); // Khi đóng, modal nằm cao hơn
+        opacity: 0;
+        transition: transform 0.5s cubic-bezier(.4, 0, .2, 1), opacity 0.3s cubic-bezier(.4, 0, .2, 1);
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: $border-color 1px solid;
+            padding: 10px 24px;
+            align-items: center;
+
+            .modal-header-title {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            #closeModal {
+                cursor: pointer;
+                font-size: 12px;
+                color: gray;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+
+        .modal-body {
+            display: flex;
+            padding: 24px 24px;
+            padding-left: 0;
+
+            .modal-body-left {
+
+                img {
+                    height: 450px;
+                    width: auto;
+                }
+
+                .product-actions {
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 25px;
+                    margin-top: 1.5rem;
+                    color: $third-text-color;
+
+                    .product-actions-item {
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $secondary-text-color;
+                            text-decoration: underline;
+                            text-decoration-thickness: 1.2px; // Độ dày underline
+                            text-underline-offset: 3.7px; // Khoảng cách underline với chữ
+                        }
+                    }
+                }
+            }
+
+            .modal-body-right {
+                h2 {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                }
+
+                p {
+                    color: rgb(154, 154, 154);
+                    margin-bottom: 1rem;
+                }
+
+                .product-detail {
+
+                    .product-detail__phone,
+                    .product-detail__tv,
+                    .product-detail__accessory {
+                        color: $secondary-text-color;
+                        background-color: $bg-light;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        font-size: 14px;
+                        gap: 20px 40px;
+                        padding: 10px 30px;
+                        margin-bottom: 1rem;
+
+                        .product-detail-item {
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                display: inline-block;
+                                width: 4px;
+                                height: 4px;
+                                background-color: $secondary-text-color;
+                                border-radius: 50%;
+                                position: absolute;
+                                left: -10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .product-price {
+                padding: 1rem 0;
+                border-top: $border-color 1px solid;
+                border-bottom: $border-color 1px solid;
+                color: $products-name-text-color;
+
+                .new-price {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-size: 1.4rem;
+
+                    #productPrice {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        color: var(--primary-color);
+                    }
+
+                    span:nth-of-type(3) {
+                        font-size: 14px;
+                        color: $secondary-text-color;
+                        opacity: 0.6;
+                    }
+                }
+
+                .old-price {
+                    display: flex;
+                    gap: 0.5rem;
+
+                    #oldPrice {
+                        text-decoration: line-through;
+                    }
+
+                    #discount {
+                        color: #099FDD;
+                    }
+                }
+            }
+
+            .product-select__phone {
+                .product-storage {
+                    padding: 0.5rem 0;
+                    padding-bottom: 0;
+
+                    p {
+                        color: $products-name-text-color;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .storage-select {
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: space-between;
+
+                        .storage-option {
+                            color: lighten($products-name-text-color, 10%);
+                            background-color: transparent;
+                            font-size: 1rem;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 5px;
+                            transition: all 0.3s;
+
+                            img {
+                                border-radius: 50%;
+                            }
+
+                            border: 1px solid darken($border-color, 10%);
+                            height: 40px;
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .product-color {
+                    padding: 0.5rem 0;
+
+                    p {
+                        color: $products-name-text-color;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .color-select {
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: space-between;
+
+                        .color-option {
+                            color: lighten($products-name-text-color, 10%);
+                            background-color: transparent;
+                            font-size: 1rem;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 5px;
+                            border: 1px solid darken($border-color, 10%);
+                            height: 40px;
+                            text-align: center;
+                            width: 100%;
+                            transition: all 0.3s;
+
+                            img {
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .storage-option.active,
+            .color-option.active {
+                border: 1px solid var(--primary-color) !important;
+                background-color: #F6F6FB !important;
+                color: var(--primary-color) !important;
+            }
+
+            .product-select__tv {
+                .product-resolution {
+                    padding: 0.5rem 0;
+                    padding-bottom: 0;
+
+                    p {
+                        color: $products-name-text-color;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .resolution-select {
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: space-between;
+
+                        .resolution-option {
+                            color: lighten($products-name-text-color, 10%);
+                            background-color: transparent;
+                            font-size: 1rem;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 5px;
+                            transition: all 0.3s;
+
+                            img {
+                                border-radius: 50%;
+                            }
+
+                            border: 1px solid darken($border-color, 10%);
+                            height: 40px;
+                            text-align: center;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .product-screen-size {
+                    padding: 0.5rem 0;
+
+                    p {
+                        color: $products-name-text-color;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .screen-size-select {
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: space-between;
+
+                        .screen-size-option {
+                            color: lighten($products-name-text-color, 10%);
+                            background-color: transparent;
+                            font-size: 1rem;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 5px;
+                            border: 1px solid darken($border-color, 10%);
+                            height: 40px;
+                            text-align: center;
+                            width: 100%;
+                            transition: all 0.3s;
+                        }
+                    }
+                }
+            }
+
+            .resolution-option.active,
+            .screen-size-option.active {
+                border: 1px solid var(--primary-color) !important;
+                background-color: #F6F6FB !important;
+                color: var(--primary-color) !important;
+            }
+
+
+            .payment-button {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1rem;
+
+                div {
+                    text-align: center;
+                    font-size: 1rem !important;
+                    cursor: pointer;
+
+                    &:first-of-type {
+                        width: 50%;
+                        @include small-btn($bg-gray, white, darken($bg-gray, 10%));
+                    }
+
+                    &:last-of-type {
+                        width: 50%;
+                        @include small-btn(var(--primary-color), white, var(--primary-color-dark));
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal.open {
+    opacity: 1;
+    z-index: 99999;
+
+    .modal-inner {
+        transform: translateY(0); // Khi mở, modal trượt xuống
+        opacity: 1;
+    }
+}
+
+// ngăn chặn scrolling khi modal mở
+// khi mở modal thì thêm class modal-open vào body
+// khi đóng modal thì xóa class modal-open khỏi body
+// overflow: hidden sẽ ngăn chặn scrolling của trang vì sẽ ẩn thanh cuộn của trang khi modal mở khiến người dùng không thể cuộn trang nền khi modal đang hiển thị
+.modal-open-prevent-scroll {
+    overflow: hidden;
+}
+
+// quantity control styles
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .wrapper {
+        height: 30px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFF;
+        // border-radius: 12px;
+        // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .wrapper div {
+        color: white;
+        height: 100%;
+        width: 25%;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        user-select: none;
+        line-height: 1.7;
+    }
+
+    .wrapper div.minus {
+        border: 1px solid #bebebe;
+        background-color: #bebebe;
+    }
+
+    .wrapper div.plus {
+        border: 1px solid #099FDD;
+        background-color: #099FDD;
+    }
+
+    .wrapper div.num {
+        color: black;
+        width: 50%;
+        font-weight: bold;
+        font-size: 16px;
+        pointer-events: none;
+        background-color: transparent;
+        border-top: 1px solid #bebebe;
+        border-bottom: 1px solid #bebebe;
+    }
+}

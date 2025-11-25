@@ -1,0 +1,90 @@
+[
+    {
+        "name": "NUUA S4 Pro",
+        "oldPrice": 340,
+        "newPrice": 299,
+        "discount": 12.1,
+        "rating": 4.8,
+        "img": "product-01.png",
+        "desc": "Powerful smartphone with bright display and fast performance.",
+        "type": "Smartphone",
+        "id": "S1"
+    },
+    {
+        "name": "NUUA S4",
+        "oldPrice": 284,
+        "newPrice": 244,
+        "discount": 14.1,
+        "rating": 4.5,
+        "img": "product-02.png",
+        "desc": "Elegant design with great camera and smooth performance.",
+        "type": "Smartphone",
+        "id": "S2"
+    },
+    {
+        "name": "NUUA K5 Grand",
+        "oldPrice": 229,
+        "newPrice": 189,
+        "discount": 17.5,
+        "rating": 4.2,
+        "img": "product-03.png",
+        "desc": "Stylish and affordable with reliable battery life.",
+        "type": "Smartphone",
+        "id": "S3"
+    },
+    {
+        "name": "NUUA 9 Pro",
+        "oldPrice": 399,
+        "newPrice": 350,
+        "discount": 12.3,
+        "rating": 4.9,
+        "img": "product-04.png",
+        "desc": "Flagship model with superior performance and display.",
+        "type": "Smartphone",
+        "id": "S4"
+    },
+    {
+        "name": "NUUA M4 Grand",
+        "oldPrice": 269,
+        "newPrice": 239,
+        "discount": 11.2,
+        "rating": 4.4,
+        "img": "product-05.png",
+        "desc": "Large screen and elegant design for everyday use.",
+        "type": "Smartphone",
+        "id": "S5"
+    },
+    {
+        "name": "NUUA M4",
+        "oldPrice": 299,
+        "newPrice": 269,
+        "discount": 10,
+        "rating": 4.3,
+        "img": "product-06.png",
+        "desc": "Balanced performance and long-lasting battery.",
+        "type": "Smartphone",
+        "id": "S6"
+    },
+    {
+        "name": "NUUA K5",
+        "oldPrice": 199,
+        "newPrice": 169,
+        "discount": 15.1,
+        "rating": 3.9,
+        "img": "product-07.png",
+        "desc": "Compact, affordable, and stylish smartphone.",
+        "type": "Smartphone",
+        "id": "S7"
+    },
+    {
+        "name": "NUUA A2 Pro",
+        "oldPrice": 259,
+        "newPrice": 219,
+        "discount": 15.4,
+        "rating": 4.6,
+        "img": "product-08.png",
+        "desc": "Mid-range smartphone with premium design and solid camera.",
+        "type": "Smartphone",
+        "id": "S8"
+    }
+]

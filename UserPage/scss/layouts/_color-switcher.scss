@@ -1,0 +1,108 @@
+.color-switcher {
+    position: fixed;
+    top: 50vh;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 9999;
+
+    .color-switcher__toggle {
+        background: #333333;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        position: absolute;
+        top: 0;
+        right: -40px;
+        font-size: 1.2rem;
+    }
+
+    .color-switcher__panel {
+        background: #fff;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        padding: 24px 24px 20px 24px;
+        min-width: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .color-switcher__title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    .color-switcher__divider {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 0 0 8px 0;
+    }
+
+    .color-switcher__colors {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    .color-switcher__color {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.15s;
+
+        &:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .color-switcher__reset {
+        background: #1428a0;
+        color: #fff;
+        border: none;
+        padding: 10px 0;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: background 0.2s;
+    }
+}
+
+//Transistion for color switcher
+.color-switcher.collapsed {
+    left: -228px; // dịch panel sang trái, chỉ còn nút bánh răng lộ ra
+    transition: left 0.5s;
+
+    .color-switcher__panel {
+        pointer-events: none;
+    }
+
+    .color-switcher__toggle {
+        i {
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+    }
+}
+
+.color-switcher {
+    transition: left 0.5s;
+
+    .color-switcher__toggle {
+        i {
+            transition: transform 0.5s;
+        }
+    }
+}

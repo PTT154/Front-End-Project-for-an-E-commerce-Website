@@ -1,0 +1,170 @@
+.hero-banner {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.5);
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+
+.banner-3 {
+    &::after {
+        background: var(--primary-color);
+        opacity: 0.4;
+    }
+}
+
+.hero-content {
+    color: $hero-text-color;
+    padding: 5rem 0;
+    z-index: 2;
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.banner-1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-image: url("../../../assets/images/slider/k5grand.jpg");
+
+    .hero-content {
+        p:first-child {
+            @include text-12();
+            font-weight: 100;
+        }
+
+        h2 {
+            @include text-13();
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        p:last-of-type {
+            margin-bottom: 1.8rem;
+        }
+
+        a {
+            text-decoration: none;
+            @include big-btn(var(--primary-color), $hero-text-color, var(--primary-color-dark), $hero-text-color);
+        }
+    }
+}
+
+.banner-2 {
+    text-align: right;
+    background-image: url("../../../assets/images/slider/slider-4.jpg");
+    display: flex;
+    align-items: center;
+
+    .hero-content {
+        h2 {
+            @include text-13();
+            margin-bottom: 0.5rem;
+
+            sup {
+                @include sup5G();
+            }
+        }
+
+        h3 {
+            @include text-7();
+            margin-bottom: 1.5rem;
+        }
+
+        p:first-of-type {
+            @include text-4();
+            font-weight: 700;
+            background-color: var(--primary-color);
+            display: inline-block;
+            padding: 0 1.5rem;
+            border-radius: 32px;
+            padding-bottom: 0.15rem !important;
+            margin-bottom: 1.5rem;
+            transition: all 0.5s;
+
+            sup {
+                font-size: 0.75rem;
+            }
+        }
+
+        p:nth-of-type(2) {
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                @include big-btn(#212529, $hero-text-color, #424649, $hero-text-color);
+            }
+        }
+
+        p:nth-of-type(3) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.banner-3 {
+    text-align: left;
+    background-image: url("../../../assets/images/slider/slider-5.jpg");
+    display: flex;
+    align-items: center;
+
+    .hero-content {
+        h2 {
+            @include text-13();
+            margin-bottom: 0.5rem;
+
+            sup {
+                @include sup5G();
+            }
+        }
+
+        h3 {
+            @include text-7();
+        }
+
+        p:first-of-type {
+            margin-bottom: 1.5rem;
+        }
+
+        p:nth-of-type(2) {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+
+            span {
+                margin-left: 0.5rem;
+                font-weight: 500;
+                @include text-6();
+            }
+        }
+
+        p:nth-of-type(3) {
+            cursor: pointer;
+            display: flex;
+
+            a:first-of-type {
+                text-decoration: none;
+                @include big-btn(white, black, darken(white, 15%));
+            }
+
+            a:last-of-type {
+                margin-left: 1.5rem;
+                text-decoration: none;
+                border: 1px solid white;
+                @include big-btn(transparent, white, white, black);
+            }
+        }
+    }
+}

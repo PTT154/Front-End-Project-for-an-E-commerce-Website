@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./images/products/product-01.png" type="image/x-icon">
+  <title>Mobile Phone E-Commerce</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/owl.carousel.css" />
+  <link rel="stylesheet" href="./css/owl.theme.default.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <a href="">
+            <img src="./images/logo-light.png" alt="" />
+          </a>
+        </div>
+        <div class="header-nav">
+          <ul>
+            <li>
+              <a href="">
+                PHONES
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                TV
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                ACCESSORIES
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href=""> ABOUT </a>
+            </li>
+            <li>
+              <a href="">
+                FEATURES
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                PAGES
+                <i class="arrow"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <nav class="support-login-search">
+          <ul>
+            <li>
+              <a href=""> SUPPORT </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+
+            <li class="cart">
+              <a href="">
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="cartCount">0</span>
+              </a>
+
+              <!-- cart dropdown -->
+              <div class="cart-dropdown">
+                <div class="cart-dropdown__inner">
+                  <ul class="cart-dropdown__list" id="cartDropdownList">
+                    <!-- TEST LAYOUT -->
+                    <!-- <li class="cart-dropdown__item">
+                      <a class="remove-cart-item__button" href="">
+                        <i class="fa-solid fa-xmark"></i>
+                      </a>
+                      <img class="cart-dropdown__item-img" src="./images/products/product-01.jpg"
+                        style="width: 65px; height: auto;" alt="">
+                      <div class="cart-dropdown__item-info">
+                        <div class="cart-dropdown__item-name">NUUA S4 Pro Black 6GB + 128GB</div>
+                        <div class="cart-dropdown__item-meta">$299 × 2</div>
+                      </div>
+                    </li>
+                    <li class="cart-dropdown__item">
+                      <a class="remove-cart-item__button" href="">
+                        <i class="fa-solid fa-xmark"></i>
+                      </a>
+                      <img class="cart-dropdown__item-img" src="./images/products/product-08.png"
+                        style="width: 65px; height: auto;" alt="">
+                      <div class="cart-dropdown__item-info">
+                        <div class="cart-dropdown__item-name">NUUA A2 Pro Black 6GB +128GB</div>
+                        <div class="cart-dropdown__item-meta">$219 × 1</div>
+                      </div>
+                    <li class="cart-dropdown__item">
+                      <a class="remove-cart-item__button" href="">
+                        <i class="fa-solid fa-xmark"></i>
+                      </a>
+                      <img class="cart-dropdown__item-img" src="./images/products/product-10.jpg"
+                        style="width: 65px; height: auto;" alt="">
+                      <div class="cart-dropdown__item-info">
+                        <div class="cart-dropdown__item-name">OLED TV 43-inch 4K UHD</div>
+                        <div class="cart-dropdown__item-meta">$1299 × 1</div>
+                      </div>
+                    </li>
+                    <li class="cart-dropdown__item">
+                      <a class="remove-cart-item__button" href="">
+                        <i class="fa-solid fa-xmark"></i>
+                      </a>
+                      <img class="cart-dropdown__item-img" src="./images/products/product-01.jpg"
+                        style="width: 65px; height: auto;" alt="">
+                      <div class="cart-dropdown__item-info">
+                        <div class="cart-dropdown__item-name">NUUA S4 Pro Black 6GB + 128GB</div>
+                        <div class="cart-dropdown__item-meta">$299 × 2</div>
+                      </div>
+                    </li> -->
+                  </ul>
+
+                  <div class="cart-dropdown__footer">
+                    <div class="cart-dropdown__subtotal">
+                      <span class="cart-dropdown__subtotal-label">SUBTOTAL (<span id="cartSubtotalCount">0 items</span>)
+                      </span>
+                      <span class="cart-dropdown__subtotal-value" id="cartSubtotalValue">$0</span>
+                    </div>
+                    <div class="cart-dropdown__actions">
+                      <button onclick="handleOpenCheckoutModal()" class="view-cart__button">View Cart</button>
+                      <button class="checkout__button" onclick="handleCheckout()">Checkout</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="search">
+              <a href="">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+  </header>
+  <!-- hero section -->
+  <section class="hero-section owl-carousel owl-theme">
+    <div class="hero-banner banner-1">
+      <div class="container">
+        <div class="hero-content">
+          <p>Next-gen</p>
+          <h2>Leica Summilux Lens</h2>
+          <p>Large aperture and excellent optical performance.</p>
+          <a href="" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-banner banner-2">
+      <div class="container">
+        <div class="hero-content">
+          <h2>
+            ZOOM M4 Grand X
+            <sup> 5G </sup>
+          </h2>
+          <h3>The Best display Under $250</h3>
+          <p>
+            Launching on 24<sup>th</sup>
+            Jun, 12PM
+          </p>
+          <p>
+            <a href="">Notify Me</a>
+          </p>
+          <p>Click "Notify Me" and win Prize</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-banner banner-3">
+      <div class="container">
+        <div class="hero-content">
+          <h2>NUUA M4 Pro <sup>5G</sup></h2>
+          <h3>Best Budget 5G Phone</h3>
+          <p>Upto $100 Off</p>
+          <p>From <span>$189丨6GB+128GB</span></p>
+          <p>
+            <a href="">Buy Now</a>
+            <a href="">Learn More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- products -->
+  <section class="products-section">
+    <div class="container">
+      <ul class="products-tabs">
+        <li class="active">
+          <a href="">Newest</a>
+        </li>
+        <li>
+          <a href="">Bestseller</a>
+        </li>
+        <li>
+          <a href="">Premium</a>
+        </li>
+        <li>
+          <a href="">5G</a>
+        </li>
+        <li>
+          <a href="">Best Deals</a>
+        </li>
+      </ul>
+
+      <div class="products-list owl-carousel owl-theme" id="listProductPhones">
+        <!-- <div class="products-list__item">
+                    <div class="discount">70% off</div>
+                    <a href="" class="products-list__thumb">
+                        <img src="./images/products/product-01.jpg" alt="">
+                    </a>
+                    <div class="products-list__info">
+                        <h4 class="products-list__name">
+                            <a href="#">NUUA S4 Pro</a>
+                        </h4>
+                        <div class="products-list__price">
+                            <span class="price--old">$340</span>
+                            <span class="price--new">$299</span>
+                        </div>
+                        <div class="rating">
+                            <span>3.5</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="products-list__btn">
+                        <button>Buy Now</button>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="discount">70% off</div>
+                    <a href="" class="products-list__thumb">
+                        <img src="./images/products/product-02.jpg" alt="">
+                    </a>
+                    <div class="products-list__info">
+                        <h4 class="products-list__name">
+                            <a href="#">NUUA S4</a>
+                        </h4>
+                        <div class="products-list__price">
+                            <span class="price--old">$284</span>
+                            <span class="price--new">$244</span>
+                        </div>
+                        <div class="rating">
+                            <span>3.5</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="products-list__btn">
+                        <button>Buy Now</button>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="discount">70% off</div>
+                    <a href="" class="products-list__thumb">
+                        <img src="./images/products/product-03.jpg" alt="">
+                    </a>
+                    <div class="products-list__info">
+                        <h4 class="products-list__name">
+                            <a href="#">NUUA S4 Pro</a>
+                        </h4>
+                        <div class="products-list__price">
+                            <span class="price--old">$229</span>
+                            <span class="price--new">$189</span>
+                        </div>
+                        <div class="rating">
+                            <span>3.5</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="products-list__btn">
+                        <button>Buy Now</button>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="discount">70% off</div>
+                    <a href="" class="products-list__thumb">
+                        <img src="./images/products/product-04.jpg" alt="">
+                    </a>
+                    <div class="products-list__info">
+                        <h4 class="products-list__name">
+                            <a href="#">NUUA S4 Pro</a>
+                        </h4>
+                        <div class="products-list__price">
+                            <span class="price--old">$399</span>
+                            <span class="price--new">$350</span>
+                        </div>
+                        <div class="rating">
+                            <span>3.5</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="products-list__btn">
+                        <button>Buy Now</button>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="discount">70% off</div>
+                    <a href="" class="products-list__thumb">
+                        <img src="./images/products/product-05.jpg" alt="">
+                    </a>
+                    <div class="products-list__info">
+                        <h4 class="products-list__name">
+                            <a href="#">NUUA S4 Pro</a>
+                        </h4>
+                        <div class="products-list__price">
+                            <span class="price--old">$340</span>
+                            <span class="price--new">$299</span>
+                        </div>
+                        <div class="rating">
+                            <span>3.5</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="products-list__btn">
+                        <button>Buy Now</button>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="discount">70% off</div>
+                    <a href="" class="products-list__thumb">
+                        <img src="./images/products/product-06.jpg" alt="">
+                    </a>
+                    <div class="products-list__info">
+                        <h4 class="products-list__name">
+                            <a href="#">NUUA S4</a>
+                        </h4>
+                        <div class="products-list__price">
+                            <span class="price--old">$284</span>
+                            <span class="price--new">$244</span>
+                        </div>
+                        <div class="rating">
+                            <span>3.5</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="products-list__btn">
+                        <button>Buy Now</button>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="discount">70% off</div>
+                    <a href="" class="products-list__thumb">
+                        <img src="./images/products/product-07.jpg" alt="">
+                    </a>
+                    <div class="products-list__info">
+                        <h4 class="products-list__name">
+                            <a href="#">NUUA S4 Pro</a>
+                        </h4>
+                        <div class="products-list__price">
+                            <span class="price--old">$229</span>
+                            <span class="price--new">$189</span>
+                        </div>
+                        <div class="rating">
+                            <span>3.5</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="products-list__btn">
+                        <button>Buy Now</button>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="products-list__item">
+                    <div class="discount">70% off</div>
+                    <a href="" class="products-list__thumb">
+                        <img src="./images/products/product-08.jpg" alt="">
+                    </a>
+                    <div class="products-list__info">
+                        <h4 class="products-list__name">
+                            <a href="#">NUUA S4 Pro</a>
+                        </h4>
+                        <div class="products-list__price">
+                            <span class="price--old">$399</span>
+                            <span class="price--new">$350</span>
+                        </div>
+                        <div class="rating">
+                            <span>3.5</span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="products-list__btn">
+                        <button>Buy Now</button>
+                        <button>Learn More</button>
+                    </div>
+                </div> -->
+      </div>
+
+      <!-- TV and Audio -->
+      <div class="banner__tv-audio">
+        <div class="tv">
+          <img src="./images/banner/banner-1.jpg" alt="" />
+          <div class="tv__text">
+            <h2>Smart TV</h2>
+            <p>Starting Smart TV from $99</p>
+          </div>
+        </div>
+        <div class="audio">
+          <img src="./images/banner/banner-2.jpg" alt="" />
+          <div class="audio__text">
+            <h2>Audio</h2>
+            <p>Starting Audio $16</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- List TV -->
+      <div class="list__tv">
+        <div class="list__tv_header">
+          <h2>Smart TV</h2>
+          <button>View all</button>
+        </div>
+        <div id="listProductTV" class="listProductTV owl-carousel owl-theme"></div>
+      </div>
+
+      <!-- Feature Accessories -->
+      <div class="accessories">
+        <div class="accessories__header">
+          <h2>Featured Accessories</h2>
+          <button>View all</button>
+        </div>
+        <div class="accessories__listProduct owl-carousel owl-theme" id="listAccessories"></div>
+      </div>
+
+      <!-- Explore Videos -->
+    </div>
+  </section>
+
+  <!-- Buy Now (Add To Cart) Modal -->
+  <!-- <button id="openModal">Open Modal</button> -->
+  <div class="modal" id="modal">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <div class="modal-header-title">Add to your Cart</div>
+        <div id="closeModal">
+          <i class="fa-solid fa-x"></i>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body-left">
+          <img src="" alt="" id="productImg" />
+          <div class="quantity-control">
+            <div class="wrapper">
+              <div class="minus">-</div>
+              <div class="num">01</div>
+              <div class="plus">+</div>
+            </div>
+          </div>
+          <div class="product-actions">
+            <div class="product-actions-item btn-share">
+              <i class="fa-solid fa-share"></i>
+              Share
+            </div>
+            <div class="product-actions-item btn-wishlist">
+              <i class="fa-solid fa-heart"></i>
+              Add to wishlist
+            </div>
+            <div class="product-actions-item btn-compare">
+              <i class="fa-solid fa-rotate"></i>
+              Compare
+            </div>
+          </div>
+        </div>
+        <div class="modal-body-right">
+          <h2 id="productName">NUUA S4 Pro 5G</h2>
+          <!-- Phone Info -->
+          <p id="productInfo-phone">
+            <span id="productName-productStorage">8GB+128GB, </span>
+            <span id="productName-productColor">Black</span>
+          </p>
+
+          <!-- TV Info -->
+          <p id="productInfo-tv">
+            <span id="productName-productResolution">4K UHD, </span>
+            <span id="productName-productScreenSize">43-inch</span>
+          </p>
+          <div class="product-detail">
+            <div class="product-detail__phone">
+              <div class="product-detail-item">22.5W Flash Charge</div>
+              <div class="product-detail-item">3760mAh Battery</div>
+              <div class="product-detail-item">
+                Qualcomm Snapdragon 675AIE
+              </div>
+              <div class="product-detail-item">
+                Flash In-Display Fingerprint
+              </div>
+              <div class="product-detail-item">
+                44MP AI Triple Rear Camera
+              </div>
+              <div class="product-detail-item">
+                15.20cm (5.38) FHD Display
+              </div>
+            </div>
+
+            <div class="product-detail__tv">
+              <div class="product-detail-item">55-inch 4K OLED Display</div>
+              <div class="product-detail-item">
+                Smart TV with Wi-Fi & Bluetooth
+              </div>
+              <div class="product-detail-item">
+                Dolby Vision & HDR10 Support
+              </div>
+              <div class="product-detail-item">2x20W Stereo Speakers</div>
+              <div class="product-detail-item">Voice Control Remote</div>
+            </div>
+          </div>
+
+          <div class="product-price">
+            <div class="new-price">
+              <span>Price: </span>
+              <span id="productPrice"></span>
+              <span>(inclusive of all taxes)</span>
+            </div>
+            <div class="old-price">
+              <span>Old Price:</span>
+              <span id="oldPrice"></span>
+              <span id="discount"></span>
+            </div>
+          </div>
+
+          <div class="product-select__phone">
+            <div class="product-storage">
+              <p>Storage:</p>
+              <div class="storage-select">
+                <button class="storage-option active">8GB + 128GB</button>
+                <button class="storage-option">16GB + 256GB</button>
+              </div>
+            </div>
+            <div class="product-color">
+              <p>Color:</p>
+              <div class="color-select">
+                <button class="color-option active">
+                  <img class="rounded-circle me-2" src="images/color/black.jpg" alt="" />
+                  Black
+                </button>
+                <button class="color-option">
+                  <img class="rounded-circle me-2" src="images/color/purple.jpg" alt="" />
+                  Purple
+                </button>
+                <button class="color-option">
+                  <img class="rounded-circle me-2" src="images/color/red.jpg" alt="" />
+                  Red
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-select__tv">
+            <div class="product-resolution">
+              <p>Resolution:</p>
+              <div class="resolution-select">
+                <button class="resolution-option active">4K UHD</button>
+                <button class="resolution-option">8K UHD</button>
+              </div>
+            </div>
+            <div class="product-screen-size">
+              <p>Screen Size:</p>
+              <div class="screen-size-select">
+                <button class="screen-size-option active">43-inch</button>
+                <button class="screen-size-option">55-inch</button>
+                <button class="screen-size-option">65-inch</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-button">
+            <div onclick="addProductToCart()">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Add to Cart
+            </div>
+            <div onclick="handleBtnBuyNow()">
+              <i class="fa-solid fa-bolt-lightning"></i>
+              Buy Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Purchase Modal -->
+  <!-- Popup Cart Layout -->
+  <div class="checkout-modal" id="checkout-modal">
+    <div class="modal-inner">
+      <div class="modal-header">
+        <div class="modal-header-title">Checkout</div>
+        <div id="closeCheckoutModal">
+          <i class="fa-solid fa-x"></i>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="cart-content">
+          <div class="cart-main">
+            <div class="cart-table-wrapper">
+              <table class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody id="checkoutCartList">
+                  <!-- More product rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="cart-summary">
+            <div class="cart-summary-box">
+              <h2 class="cart-summary-title">Summary</h2>
+              <div class="cart-summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal"></span>
+              </div>
+              <div class="cart-summary-row">
+                <span>Taxes</span>
+                <span>$1.99</span>
+              </div>
+              <div class="cart-summary-row">
+                <span>Shipping</span>
+                <span>$0.00</span>
+              </div>
+              <hr />
+              <div class="cart-summary-row cart-summary-total">
+                <span>Total</span>
+                <span id="total"></span>
+              </div>
+              <button class="cart-checkout-btn" onclick="handleCheckout()">Checkout</button>
+              <button class="cart-clear-btn" onclick="handleClearCart()">Clear Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="explore-videos">
+    <div class="container">
+      <div class="explore-videos__header">
+        <h2>Explore Videos</h2>
+        <button href="#" class="explore-videos__viewall">View all</button>
+      </div>
+      <div class="explore-videos__list owl-carousel owl-theme">
+        <div class="explore-videos__item">
+          <img src="./images/video/img-01.jpg" alt="Video 1" />
+          <button class="explore-videos__play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+        <div class="explore-videos__item">
+          <img src="./images/video/img-02.jpg" alt="Video 2" />
+          <button class="explore-videos__play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+        <div class="explore-videos__item">
+          <img src="./images/video/img-03.jpg" alt="Video 3" />
+          <button class="explore-videos__play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+        <div class="explore-videos__item">
+          <img src="./images/video/img-04.jpg" alt="Video 4" />
+          <button class="explore-videos__play">
+            <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+        <!-- Thêm video khác nếu muốn -->
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__features">
+      <div class="container">
+        <div class="footer__feature__item">
+          <i class="fa-solid fa-truck"></i>
+          <div>
+            <div class="footer__feature-title">FREE DELIVERY</div>
+            <div class="footer__feature-desc">On Above $30</div>
+          </div>
+        </div>
+        <div class="footer__feature__item">
+          <i class="fa-solid fa-sync-alt"></i>
+          <div>
+            <div class="footer__feature-title">10-DAYS</div>
+            <div class="footer__feature-desc">Replacement Services</div>
+          </div>
+        </div>
+        <div class="footer__feature__item">
+          <i class="fa-solid fa-shield-alt"></i>
+          <div>
+            <div class="footer__feature-title">100% SECURE</div>
+            <div class="footer__feature-desc">Payment Gateway</div>
+          </div>
+        </div>
+        <div class="footer__feature__item">
+          <i class="fa-solid fa-check-square"></i>
+          <div>
+            <div class="footer__feature-title">100% MANUFACTURING</div>
+            <div class="footer__feature-desc">Warranty</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__main">
+      <div class="footer__col">
+        <div class="footer__col-title">SMART PHONES</div>
+        <ul>
+          <li><a href="#">NUUA S4 Pro</a></li>
+          <li><a href="#">NUUA S4</a></li>
+          <li><a href="#">A2 Series</a></li>
+          <li><a href="#">NUUA K5 Grand</a></li>
+          <li><a href="#">NUUA 9 Pro</a></li>
+          <li><a href="#">NUUA M4 Grand</a></li>
+          <li><a href="#">All Smartphones</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">OTHER PRODUCTS</div>
+        <ul>
+          <li><a href="#">LED TV</a></li>
+          <li><a href="#">Tablets</a></li>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Audio</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">COMPANY</div>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">SUPPORT</div>
+        <ul>
+          <li><a href="#">Support Center</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Service Centers</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Security Feedback</a></li>
+          <li><a href="#">E-waste Management</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__col--customer">
+        <div class="footer__col-title">CUSTOMER CARE</div>
+        <ul>
+          <li><i class="fa-solid fa-comments"></i> Chat with us</li>
+          <li><i class="fa-solid fa-phone-alt"></i> 1800-499-0499 (24*7)</li>
+          <li><i class="fa-solid fa-envelope"></i> Email Us</li>
+        </ul>
+        <div class="footer__col-title">SUBSCRIBE</div>
+        <div class="footer__subscribe">
+          <input type="text" placeholder="Enter Your Email" />
+          <button><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <div class="footer__copyright-left">
+        Copyright © 2025 <span class="footer__brand">NUUA</span>. All Rights Reserved.
+      </div>
+      <div class="footer__copyright-center">
+        <i class="fa-solid fa-globe"></i> United States
+      </div>
+      <div class="footer__copyright-right">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- color switcher -->
+  <div class="color-switcher collapsed">
+    <div class="color-switcher__toggle">
+      <i class="fa-solid fa-gear"></i>
+    </div>
+    <div class="color-switcher__panel">
+      <div class="color-switcher__title">Color Switcher</div>
+      <hr class="color-switcher__divider" />
+      <div class="color-switcher__colors">
+        <button class="color-switcher__color" style="background:#0D6EFD"></button>
+        <button class="color-switcher__color" style="background:#6610F2"></button>
+        <button class="color-switcher__color" style="background:#6F42C1"></button>
+        <button class="color-switcher__color" style="background:#D63384"></button>
+        <button class="color-switcher__color" style="background:#DC3545"></button>
+        <button class="color-switcher__color" style="background:#FD7E14"></button>
+        <button class="color-switcher__color" style="background:#FFC107"></button>
+        <button class="color-switcher__color" style="background:#28A745"></button>
+        <button class="color-switcher__color" style="background:#20C997"></button>
+        <button class="color-switcher__color" style="background:#0DCAF0"></button>
+      </div>
+      <button class="color-switcher__reset">Reset Default</button>
+    </div>
+  </div>
+
+  <!-- back to top -->
+  <a href="#" class="cd-top text-replace js-cd-top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <!-- owl carousel -->
+  <script src="./js/owl.carousel.js"></script>
+  <script>
+    $(".hero-section").owlCarousel({
+      loop: true,
+      nav: true,
+      items: 1,
+      autoplay: true,
+    });
+  </script>
+
+  <script>
+    $(".explore-videos__list").owlCarousel({
+      nav: true,
+      dots: true,
+      margin: 30,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      }
+    });
+  </script>
+
+  <!-- back to top -->
+  <script src="./js/back-to-top.js"></script>
+  <script src="./js/util.js"></script>
+
+  <!-- axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js"
+    integrity="sha512-h9644v03pHqrIHThkvXhB2PJ8zf5E9IyVnrSfZg8Yj8k4RsO4zldcQc4Bi9iVLUCCsqNY0b4WXVV4UB+wbWENA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- thư viện tinycolor (giúp tạo màu động) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"></script>
+
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./src/controllers/index.js"></script>
+
+  <script src="./js/headerSroll.js"></script>
+  <script src="./js/quantityControl.js"></script>
+  <script src="./js/resetOptions.js"></script>
+  <script src="./js/calcPriceAfterSelect.js"></script>
+  <script src="./js/cartDropDown.js"></script>
+  <script src="./js/colorSwitcher.js"></script>
+</body>
+
+</html>

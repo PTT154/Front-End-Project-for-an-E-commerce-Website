@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Charger & USB Cable",
+        "oldPrice": 29,
+        "newPrice": 25,
+        "discount": 13.8,
+        "rating": 4.5,
+        "img": "01.jpg",
+        "desc": "Universal charger and USB cable for fast charging.",
+        "type": "Accessory",
+        "id": "A1"
+    },
+    {
+        "name": "Cases & Covers",
+        "oldPrice": 12,
+        "newPrice": 10,
+        "discount": 16.7,
+        "rating": 4.4,
+        "img": "02.jpg",
+        "desc": "Premium leather protective cases and covers.",
+        "type": "Accessory",
+        "id": "A2"
+    },
+    {
+        "name": "Earphones",
+        "oldPrice": 35,
+        "newPrice": 29,
+        "discount": 17.1,
+        "rating": 4.6,
+        "img": "03.jpg",
+        "desc": "High-quality earphones with deep bass and clear sound.",
+        "type": "Accessory",
+        "id": "A3"
+    },
+    {
+        "name": "Selfie Stick",
+        "oldPrice": 45,
+        "newPrice": 38,
+        "discount": 15.6,
+        "rating": 4.3,
+        "img": "04.jpg",
+        "desc": "Extendable selfie stick with a secure phone grip.",
+        "type": "Accessory",
+        "id": "A4"
+    },
+    {
+        "name": "Power Banks",
+        "oldPrice": 139,
+        "newPrice": 125,
+        "discount": 10.1,
+        "rating": 4.7,
+        "img": "05.jpg",
+        "desc": "High-capacity power bank with multiple USB ports.",
+        "type": "Accessory",
+        "id": "A5"
+    },
+    {
+        "name": "Smartphone Camera Lens",
+        "oldPrice": 49,
+        "newPrice": 45,
+        "discount": 8.2,
+        "rating": 4.5,
+        "img": "06.jpg",
+        "desc": "External lens set for professional mobile photography.",
+        "type": "Accessory",
+        "id": "A6"
+    }
+]

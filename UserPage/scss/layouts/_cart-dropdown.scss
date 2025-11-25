@@ -1,0 +1,170 @@
+.support-login-search {
+    .cart {
+        position: relative;
+
+        // Nếu muốn hover để mở dropdown
+        // &.open .cart-dropdown,
+        // &:hover .cart-dropdown {
+        //     max-height: 400px; // hoặc lớn hơn nếu nội dung nhiều
+        //     opacity: 1;
+        //     pointer-events: auto;
+        // }
+
+        &.open .cart-dropdown {
+            max-height: 600px; // hoặc lớn hơn nếu nội dung nhiều
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 14px;
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 0 7px 6px 7px;
+            border-color: transparent transparent white transparent;
+            transform: rotate(0deg);
+            opacity: 0;
+            transition: opacity 0.18s;
+            z-index: 1001;
+        }
+
+        // Nếu muốn hover để hiện mũi tên
+        // &.open::after,
+        // &:hover::after {
+        //     opacity: 1;
+        // }
+
+        //Arrow hiển thị khi mở dropdown
+        &.open::after {
+            opacity: 1;
+        }
+
+        .cart-dropdown {
+            position: absolute;
+            right: -55px;
+            background: white;
+            top: 100%;
+            width: 360px;
+            padding: 16px;
+            min-width: 230px;
+            @include text-2;
+            z-index: 1000;
+            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.176);
+
+            // Hiệu ứng xổ xuống
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 1s cubic-bezier(.4, 0, .2, 1), opacity .18s;
+            pointer-events: none;
+
+            .cart-dropdown__inner {
+                .cart-dropdown__list {
+                    display: block;
+                    max-height: 320px; // hoặc giá trị bạn muốn
+                    overflow-y: auto;
+
+                    .cart-dropdown__empty {
+                        text-align: center;
+                        padding: 20px 0;
+                        color: $products-name-text-color;
+                        justify-content: center;
+                    }
+
+                    .cart-dropdown__item {
+                        display: flex;
+                        padding: 0;
+                        padding-bottom: 12px;
+                        margin-top: 12px;
+                        gap: 20px;
+                        border-bottom: $border-color 1px solid;
+                        position: relative;
+
+                        &:hover .remove-cart-item__button {
+                            display: block;
+                        }
+
+                        .remove-cart-item__button {
+                            color: rgb(180, 180, 180);
+                            font-size: 12px;
+                            position: absolute;
+                            top: 0;
+                            right: 10px;
+                            display: none;
+
+                            &:hover {
+                                color: gray
+                            }
+                        }
+
+                        img {
+                            cursor: pointer;
+                        }
+
+                        .cart-dropdown__item-name {
+                            cursor: pointer;
+                            margin-bottom: 0.25rem;
+                            transition: all 0.2s;
+
+                            &:hover {
+                                color: var(--primary-color);
+                            }
+                        }
+
+                        .cart-dropdown__item-meta {
+                            color: var(--primary-color);
+                        }
+                    }
+
+                    .cart-dropdown__item:first-child {
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            .cart-dropdown__footer {
+
+                .cart-dropdown__subtotal {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 1.6rem 0;
+
+                    .cart-dropdown__subtotal-label {
+                        font-weight: 500;
+                        color: $products-name-text-color;
+                    }
+
+                    .cart-dropdown__subtotal-value {
+                        font-weight: 500;
+                        color: var(--primary-color);
+                        @include text-5;
+                    }
+                }
+            }
+
+            .cart-dropdown__actions {
+                display: flex;
+                gap: 16px;
+
+                .view-cart__button {
+                    width: 50%;
+                    @include small-btn(#6c757d, white, darken(#6c757d, 10%));
+                    padding: 0.65rem 1.5rem;
+                    font-size: 1rem;
+                }
+
+                .checkout__button {
+                    width: 50%;
+                    @include small-btn(var(--primary-color), white, var(--primary-color-dark));
+                    padding: 0.65rem 1.5rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

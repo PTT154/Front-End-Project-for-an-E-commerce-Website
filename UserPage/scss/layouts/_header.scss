@@ -1,0 +1,157 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $header-bg-color;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+    z-index: 9999;
+    transition: all 0.5s;
+
+    nav {
+        .container {
+            width: 100%;
+            padding: 0 12px;
+            margin: 0 auto;
+            display: flex;
+            height: 66px;
+            align-items: center;
+            font-size: 14px;
+
+            @media (min-width: 1400px) {
+                max-width: 1320px;
+            }
+
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                max-width: 1140px;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                max-width: 960px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                max-width: 720px;
+            }
+
+            @media (max-width: 767px) {
+                max-width: 540px;
+            }
+
+            .logo {
+                margin-right: 1rem;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                a {
+                    display: flex;
+                }
+            }
+
+            .header-nav {
+                height: 100%;
+                display: flex;
+                flex: 1;
+
+                ul {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        list-style: none;
+                        padding-right: 1.6rem;
+                        padding-left: 0.85em;
+
+                        &:hover a {
+                            color: $header-text-hover-color;
+                        }
+
+                        &:hover i::after {
+                            border-color: $header-text-hover-color;
+                        }
+
+                        a {
+                            color: $header-text-color;
+                            text-decoration: none;
+                            font-size: 14px;
+                            transition: all 0.5s;
+
+                            i {
+                                font-size: 10px;
+                                font-weight: 600;
+                                position: relative;
+
+                                &::after {
+                                    content: "";
+                                    width: 7.5px;
+                                    height: 7.5px;
+                                    border-top: 1px solid $header-text-color;
+                                    border-right: 1px solid $header-text-color;
+                                    display: inline-block;
+                                    bottom: 50%;
+                                    left: 50%;
+                                    position: absolute;
+                                    transform: translate(60%, 10%) rotate(135deg);
+                                    transition: all 0.5s;
+                                }
+                            }
+                        }
+                    }
+
+                    li:nth-of-type(4) {
+                        padding-right: 0.85em;
+                    }
+                }
+            }
+
+            .support-login-search {
+                height: 100%;
+
+                ul {
+                    height: 100%;
+                    display: flex;
+
+                    li {
+                        height: 100%;
+                        list-style: none;
+                        padding: 0 0.85em;
+                        display: flex;
+                        align-items: center;
+
+                        &:hover a {
+                            color: $header-text-hover-color
+                        }
+
+                        a {
+                            color: $header-text-color;
+                            text-decoration: none;
+                            transition: all 0.5s;
+                        }
+                    }
+
+                    .cart a {
+                        position: relative;
+
+                        #cartCount {
+                            position: absolute;
+                            top: -8px;
+                            right: -8px;
+                            background: #e53935;
+                            color: #fff;
+                            font-size: 10px;
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            box-sizing: border-box;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
